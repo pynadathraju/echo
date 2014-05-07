@@ -1,0 +1,4 @@
+echo
+====
+
+plugin test
