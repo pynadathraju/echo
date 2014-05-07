@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="org.apache.cordova.device" version="0.2.3">
+        <name>Device</name>
+        <description>Cordova Device Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,device</keywords>
+        <js-module src="www/echo.js" name="device">
+            <clobbers target="device" />
+        </js-module>
+        <platform name="android">
+            <config-file target="config.xml" parent="/*">
+                <feature name="EchoPlugin">
+       				<param name="android-package" value="com.unit11apps.Echo.EchoPlugin" />
+				</feature>
+            </config-file>
+            <source-file src="EchoPlugin.java" target-dir="com/unit11apps/Echo" />
+        </platform>
+    </plugin>
